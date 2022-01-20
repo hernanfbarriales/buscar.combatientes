@@ -1,6 +1,6 @@
 ######################################################################################################################################################################################
 ### Description: This program provides all the results for a given full name (name, first surname, second surname), and groups them if more than one person relates to the same    ###
-### record. The program has 3 inputs, name (nombre), first surname (apellido1) and second surname (apellido2), and uses the MySQL database "sumarios".                             ###
+### record. The program has 3 inputs, name (nombre), first surname (apellido1) and second surname (apellido2), and uses the MySQL database "sumarios". Used for Type 1 Search.     ###
 ######################################################################################################################################################################################
 def busqueda(nombre, apellido1, apellido2):
 
