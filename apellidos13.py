@@ -1,7 +1,7 @@
 ######################################################################################################################################################################################
 ### Description: This program helps identify similar results to the ones we search, by varying one of the three search terms, permuting some terms, breaking the names down... The ###
 ### Jaro-Winkle method is also used for determining those records more likely to be the result of typos or transcription errors. The program has 3 inputs, name (nombre), first    ###
-### surname (apellido1) and second surname (apellido2), and uses the MySQL database "apellidos10".                                                                                 ###
+### surname (apellido1) and second surname (apellido2), and uses the MySQL database "apellidos10". Used for Type 1 Search.                                                         ###
 ######################################################################################################################################################################################
 def apellidos(nombre,apellido1, apellido2):
 
