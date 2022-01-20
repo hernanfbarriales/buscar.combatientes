@@ -78,7 +78,8 @@ def bus10(termino):
         nomb.append(temp1)
         ap1b.append(temp2)
         links3.append('/resultados/{}/{}/{}'.format(temp1,temp2,temp))
-
+        
+#This part of the code provides suggestions of similar names/surnames by varying one single letter at a time (for example; LOPEZ, _OPEZ, L_PEZ, LO_EZ, LOP_Z, LOPE_).
     temp1=''
     temp2=''
     temp3=''
@@ -92,6 +93,8 @@ def bus10(termino):
     busnom=temp1[0:-4]
     busap1=temp2[0:-4]
     busap2=temp3[0:-4]
+    
+#Here, we are executing SQL sentences as "SELECT nom FROM similnom WHERE nom LIKE \_OPEZ\" and further iterate. It also does the same with "WHERE ap1" and "WHERE ap2".
     cursor.execute ("SELECT nom FROM similnom WHERE {}".format(busnom))
     resnombres=np.unique(cursor.fetchall())
     urls=[]
@@ -99,7 +102,8 @@ def bus10(termino):
         if i=='':
             i='-'
         urls.append(i)
-
+        
+#Here, we are executing SQL sentences as "SELECT ap1 FROM similap1 WHERE nom LIKE \_OPEZ\" and further iterate. It also does the same with "WHERE ap1" and "WHERE ap2".
     cursor.execute ("SELECT ap1 FROM similap1 WHERE {}".format(busap1))
     resap1=np.unique(cursor.fetchall())
     urls2=[]
@@ -108,6 +112,7 @@ def bus10(termino):
             i='-'
         urls2.append(i)
 
+#Here, we are executing SQL sentences as "SELECT ap2 FROM similap1 WHERE nom LIKE \_OPEZ\" and further iterate. It also does the same with "WHERE ap1" and "WHERE ap2".
     cursor.execute ("SELECT ap2 FROM similap2 WHERE {}".format(busap2))
     resap2=np.unique(cursor.fetchall())
     urls3=[]
