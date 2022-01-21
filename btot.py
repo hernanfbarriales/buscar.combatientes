@@ -1,6 +1,6 @@
 ######################################################################################################################################################################################
 ### Description: This program allows us to search any term in all the descriptors of the database. The program has a single input (busqueda), which can have multiple words, and   ###
-### uses the MySQL database "busqueda", using the FULLTEXT search                                                                                                                  ###
+### uses the MySQL database "busqueda", using the FULLTEXT search. This is used for the Type 3 search (General Search).                                                            ###
 ######################################################################################################################################################################################
 def btot(busqueda):
 
